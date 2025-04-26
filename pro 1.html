@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        /* Basic Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* Navigation styles */
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: orange;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+        }
+        
+        nav.scrolled {
+            background-color: orange;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        nav .logo {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        
+        nav ul li a:hover {
+            background-color: white;
+            color: #333;
+        }
+        /* For page content */
+        
+        .content {
+            padding-top: 100px;
+            padding: 40px;
+        }
+        
+        section {
+            height: 100vh;
+            padding: 20px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Menu -->
+    <nav id="navbar">
+        <div class="logo"> Gagan's Profile Landing Page </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="content">
+        <section id="home">
+            <h1>
+                <center> <u>Home </u></center>
+            </h1>
+            <h1>Hello, I'm <span>GAGAN SHUKLA </span></h1>
+            <h3>Hello! My name is Gagan Shukla. I am a passionate software engineer with a frontend and background in Information Technology. My technical journey started with curiosity about computer systems and slowly turned into a strong purpose. I have
+                a Bachelor's degree in Information Technology, where I gained experience in key technologies such as programming, databases, networking, and blockchain. I have also studied web development and cloud computing. I have worked on web development
+                and cloud-based projects. My key skills include JavaScript, Python, HTML, CSS, Node.js, and SQL, and I'm always excited to learn new techniques.</h3>
+        </section>
+        <section id="about">
+            <h1>
+                <center><u>About</u></center>
+            </h1>
+            <h3>I'm a passionate web developer with experience in [JAVA , HTML,CSS,NODE J.S , SQL]. I enjoy building efficient, user-friendly websites and learning new things every day. Currently working on [Prodigy Infotech Web Developmwnt Projects]. Always
+                open for collaboration and innovative ideas..
+            </h3>
+        </section <section id="contact">
+        <h2>
+            <center><u>Contact</u></center>
+        </h2>
+        <section id="contact">
+            <p><b>Contact us form or info here</b></p>
+            <p> E-mail: gaganshukla6387@gmail.com <br> Phone No. : +91 7307313973 <br> LinkedIn :
+                <a href="https://www.linkedin.com/in/gagan-shukla-496146302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">My LinkedIn </a>
+            </p>
+        </section>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+
+</html>
